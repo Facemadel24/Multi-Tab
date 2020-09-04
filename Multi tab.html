@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Multi Tab</title>
+	<style>
+		html{
+    margin:0px;
+    padding:0px; 
+}
+body{
+    width: 98%;
+}
+.Multi-tab {
+
+    margin:0px;
+    padding:0px;
+}
+
+.Multi-tab ul {
+    margin-top: 10px;
+    list-style:none;
+    text-align: center;
+}
+ 
+.Multi-tab ul li {
+    display:inline-block;
+    margin-right:10px;
+}
+ 
+.Multi-tab ul li a {
+    display:block;
+    padding:10px 40px;
+    color:#fff;
+    background:#451250;
+    text-decoration: none;
+}
+ 
+.Multi-tab ul li a:hover {
+    background:#52175F;
+}
+ 
+.Multi-tab ul li .active {
+    background:#451250;
+    font-weight:bold;
+}
+iframe{
+    margin:0 0 0 400px;
+}
+	</style>
+	<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		  $(document).ready(function(){
+        $('#tabs-1').show();
+        $('#tabs-2').hide();
+        $('#tabs-3').hide();
+
+        $('#enlace1').click(function(){
+            $('#tabs-1').show();
+            $('#tabs-2').hide();
+            $('#tabs-3').hide();
+        });
+
+        $('#enlace2').click(function(){
+            $('#tabs-2').show();
+            $('#tabs-1').hide();
+            $('#tabs-3').hide();
+        });
+
+        $('#enlace3').click(function(){
+            $('#tabs-3').show();
+            $('#tabs-2').hide();
+            $('#tabs-1').hide();
+        });
+    });
+	</script>
+</head>
+<body>
+     
+     <section class="Multi-tab">
+        <div id="tabs">
+        <ul class="nav">
+        <li role="presentation"><a href="#tabs-1" id="enlace1">Video 1</a></li>
+        <li role="presentation"><a href="#tabs-2" id="enlace2">Video 2</a></li>
+        <li role="presentation"><a href="#tabs-3" id="enlace3">Video 3</a></li>
+    </div>
+</section>
+
+	<div id="tabs-1">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/85MppyLJHz0?autohide=0" allowfullscreen></iframe>
+	</div>
+	<div id="tabs-2">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4j5rJQMdOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<div id="tabs-3">
+		<iframe width="560" height="315" src="html.mp4" allowfullscreen></iframe>
+	</div>
+</body>
+</html>
